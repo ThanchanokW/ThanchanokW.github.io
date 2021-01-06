@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bose</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script/script.js"></script>
+</head>
+
+<!-- style="margin-left: 10%; margin-right: 10%; margin-top: 5%; margin-bottom: 10%;" -->
+<body onload="calculate()">
+    <div style="text-align: center; font-size: 32px;" class="text-success">
+        <b>JBL Go 3</b>
+      </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="./index.html">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="./harman.html">Harman Kardon</a>
+                <a class="nav-item nav-link" href="./marshall.html">Marshall</a>
+                <a class="nav-item nav-link" href="./bose.html">BOSE</a>
+                <a class="nav-item nav-link active" href="./jbl.html">JBL</a>
+                <a class="nav-item nav-link" href="./sony.html">Sony</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid" style="margin-bottom: 1%;">
+      <br>
+      <div class="row">
+        <div class="col-md-6">
+          <img src="./img/jbl.jpg" alt="JBL Go 3" width="512px" height="288px" style="object-fit: cover;">
+          <div class="row">
+            <div class="col-md-8">
+              <h1 class="text-success" style="font-size: medium;">
+                <b>JBL <br> Go 3</b>
+              </h1>
+              <p class="text-danger" style="font-size: 22px;">
+                <strong id="amount">1590</strong> Baht
+              </p>
+  
+              <div class="row">
+                <div class="col-md-6">
+                  <p>
+                    Interest rate
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <div>
+                    <div class="btn-group btn-group-toggle" data-toggle="buttons" onchange = "calculate();">
+                      <label class="btn btn-primary">
+                        <input type="radio" name="intrate" id="button1" autocomplete="off" value="0" checked> 0 %
+                      </label>
+  
+                      <label class="btn btn-primary active">
+                        <input type="radio" name="intrate" id="button2" autocomplete="off" value="4">
+                        4 %
+                      </label>
+  
+                      <label class="btn btn-primary">
+                        <input type="radio" name="intrate" id="button3" autocomplete="off" value="8">
+                        8 %
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <p style="margin-left: 15px;">
+                  <br>
+                  Downpayment
+                </p>
+              </div>
+              <div class="col-md-8">
+                <p style="text-align: right; font-size: 18px;" class="text-warning">
+                  <br>
+                  <strong>159 Baht or </strong> <strong id="downvalue"> 10 </strong> %
+                </p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-5">
+                <p style="margin-left: 15px;">
+                  Payment Period
+                </p>
+              </div>
+              <div style="margin-left: 10%">
+                <div class="btn-group btn-group-toggle" data-toggle="buttons" onchange = "calculate();">
+                  <label class="btn btn-primary">
+                    <input type="radio" name="period" id="button1" autocomplete="off" value="3" checked> 3 Months
+                  </label>
+  
+                  <label class="btn btn-primary active">
+                    <input type="radio" name="period" id="button2" autocomplete="off" value="6">
+                    6 Months
+                  </label>
+  
+                  <label class="btn btn-primary">
+                    <input type="radio" name="period" id="button3" autocomplete="off" value="9">
+                    9 Months
+                  </label>
+  
+                  <label class="btn btn-primary">
+                    <input type="radio" name="period" id="button4" autocomplete="off" value="12">
+                    12 Months
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div style="margin-top: 25%; text-align: center;">
+            <div style="font-size: 24px; background-color: #a9f36a">
+              <b>Monthly Payment<br><br></b>
+            </div>
+            <div id="payment" style="font-size: 32px; background-color: #ddf969"></div>
+            <div style="text-align: center; background-color: #a9f36a">
+              <br><br> ฿ Per Month
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>

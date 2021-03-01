@@ -4,7 +4,7 @@ import {
 } from 'react-bootstrap';
 
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
@@ -21,12 +21,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
-    <Router>
+    <Router basename="my-app">
       <Container>
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand href="/">
             <img
-              src="/catie.jpg"
+              src={`${process.env.PUBLIC_URL}/catie.jpg`}
               width="30"
               height="30"
               className="d-inline-block align-top"
